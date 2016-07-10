@@ -29,7 +29,8 @@ class Home extends React.Component {
           updateNewNote={updateNewNote.bind(this)}
         />
         <Notes
-
+          todoList={this.state.todoList}
+          mode={this.state.mode}
         />
       </div>
     );

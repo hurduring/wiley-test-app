@@ -6,10 +6,11 @@ const Notes = ({todoList, mode, ...handlers}) => {
   let list = todoList
     .filter((item) => {
      //filter notes with unwanted statuses
+     return true;
     })
     .map((item, key) => {
       return (
-        <div>item.title</div>
+        <div>{item.title}</div>
       );
     });
 
