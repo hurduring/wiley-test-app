@@ -83,4 +83,14 @@ class Note extends React.Component {
   }
 }
 
+Note.propTypes = {
+  onEdit: PropTypes.func,
+  onSubmit: PropTypes.func,
+  onRemove: PropTypes.func,
+  onComplete: PropTypes.func,
+  status: PropTypes.number,
+  title: PropTypes.string,
+  id: PropTypes.string
+};
+
 export default Note;
