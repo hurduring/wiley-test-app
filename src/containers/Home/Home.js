@@ -3,7 +3,10 @@ import TodoInput from '../../components/TodoInput';
 import Notes from '../../components/Notes';
 import {
   addNewNote,
-  updateNewNote
+  updateNewNote,
+  updateNoteStatus,
+  updateNoteTitle,
+  deleteNote
 } from './handlers';
 import {MODE} from '../../constants';
 
@@ -31,6 +34,9 @@ class Home extends React.Component {
         <Notes
           todoList={this.state.todoList}
           mode={this.state.mode}
+          updateNoteTitle={updateNoteTitle.bind(this)}
+          updateNoteStatus={updateNoteStatus.bind(this)}
+          deleteNote={deleteNote.bind(this)}
         />
       </div>
     );

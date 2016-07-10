@@ -6,16 +6,19 @@ const Notes = ({todoList, mode, ...handlers}) => {
 
   let list = todoList
     .filter((item) => {
-     //filter notes with unwanted statuses
-     return true;
+      //filter notes with unwanted statuses
+      return true;
     })
     .map((item, key) => {
       return (
         <Note
           key={key}
-          title={item.title}
           id={item.id}
+          title={item.title}
           status={item.status}
+          updateNoteTitle={handlers.updateNoteTitle}
+          updateNoteStatus={handlers.updateNoteStatus}
+          deleteNote={handlers.deleteNote}
         />
       );
     });
