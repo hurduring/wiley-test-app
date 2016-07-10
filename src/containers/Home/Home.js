@@ -22,12 +22,22 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    let initialState = {
       newTodo: "",
       todoList: [],
       mode: MODE.ACTIVE,
       sort: SORT.ASC
     };
+
+    let localStorageState = JSON.parse(localStorage.getItem('initialState'));
+
+    this.state = localStorageState !== null && typeof localStorageState === 'object' ?
+      localStorageState :
+      initialState;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem('initialState', JSON.stringify(nextState));
   }
 
   render() {
