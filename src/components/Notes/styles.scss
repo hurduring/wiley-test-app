@@ -2,10 +2,11 @@
 
 .notes{
   width: 100%;
+  padding: 1rem 0 1rem 0;
 }
 
 @include tablet {
   .notes {
-    width: auto;
+    width: 25rem;
   }
 }

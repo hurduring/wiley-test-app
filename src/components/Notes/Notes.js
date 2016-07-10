@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Note from '../Note';
 import './styles.scss';
 
 const Notes = ({todoList, mode, ...handlers}) => {
@@ -10,7 +11,10 @@ const Notes = ({todoList, mode, ...handlers}) => {
     })
     .map((item, key) => {
       return (
-        <div>{item.title}</div>
+        <Note
+          key={key}
+          title={item.title}
+        />
       );
     });
 

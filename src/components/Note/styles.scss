@@ -1,0 +1,88 @@
+@import '../../styles/mixins.scss';
+
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 4rem;
+  outline: 2px solid black;
+  margin: 1rem 0 1rem 0;
+
+  &__complete-button {
+    width: 100%;
+    text-align: center;
+    background: grey;
+  }
+  &__input {
+    display: none;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem;
+  }
+  &__title {
+    padding: 1rem;
+    width: 100%;
+    word-break: break-all;
+  }
+  &__delete-button {
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background: grey;
+  }
+  &__edit-button {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+    width: 100%;
+    text-align: center;
+    background: grey;
+    border-bottom: 1px solid black;
+    i {
+      position: relative;
+      top: 3px;
+      left: 3px;
+    }
+  }
+}
+
+.checkbox-wrap {
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 2rem;
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+  }
+}
+
+@include tablet {
+  .note {
+    flex-direction: row;
+    &__complete-button {
+      width: auto;
+      background: none;
+    }
+    &__edit-button {
+      width: auto;
+      background: none;
+      border-bottom: none;
+      i {
+        left: 0;
+      }
+    }
+    &__delete-button {
+      width: auto;
+      background: none;
+    }
+    &__title {
+      width: 15rem;
+      padding: 1rem 0 1rem 0;
+    }
+  }
+
+}
