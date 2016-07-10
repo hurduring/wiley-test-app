@@ -1,4 +1,8 @@
+@import '../../styles/mixins.scss';
+
+@include desktop {
   .container {
     width: 1000px;
     margin: 0 auto;
   }
+}
