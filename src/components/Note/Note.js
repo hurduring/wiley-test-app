@@ -20,6 +20,14 @@ class Note extends React.Component {
 
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevState.editing && this.state.editing) {
+      let node = ReactDOM.findDOMNode(this.refs.editField);
+      node.focus();
+      node.setSelectionRange(0, node.value.length);
+    }
+  }
+
   render() {
     return (
       <div className="note">
