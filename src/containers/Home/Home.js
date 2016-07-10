@@ -4,7 +4,8 @@ import Notes from '../../components/Notes';
 import {
   addNewNote,
   updateNewNote
-} from './handlers'
+} from './handlers';
+import {MODE} from '../../constants';
 
 import './styles.scss'
 
@@ -14,7 +15,8 @@ class Home extends React.Component {
 
     this.state = {
       newTodo: "",
-      todoList: []
+      todoList: [],
+      mode: MODE.ACTIVE
     };
   }
 
