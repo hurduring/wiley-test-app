@@ -7,9 +7,14 @@ import {
   updateNewNote,
   updateNoteStatus,
   updateNoteTitle,
-  deleteNote
+  deleteNote,
+  changeMode,
+  changeSort
 } from './handlers';
-import {MODE} from '../../constants';
+import {
+  MODE,
+  SORT
+} from '../../constants';
 
 import './styles.scss'
 
@@ -20,14 +25,20 @@ class Home extends React.Component {
     this.state = {
       newTodo: "",
       todoList: [],
-      mode: MODE.ACTIVE
+      mode: MODE.ACTIVE,
+      sort: SORT.ASC
     };
   }
 
   render() {
     return (
       <div className="home-container">
-        <Controls/>
+        <Controls
+          mode={this.state.mode}
+          sort={this.state.sort}
+          changeMode={changeMode.bind(this)}
+          changeSort={changeSort.bind(this)}
+        />
         <TodoInput
           title={this.state.newTodo}
           addNewNote={addNewNote.bind(this)}

@@ -54,3 +54,24 @@ export const deleteNote = function (id) {
     todoList: todoList
   });
 };
+
+export const changeSort = function () {
+  let sorted = this.state.todoList.sort((a, b) => {
+    let temp = 0;
+    if (a.title < b.title) {
+      temp = -1;
+    } else if (a.title > b.title) {
+      temp = 1;
+    }
+    return temp * this.state.sort;
+  });
+  this.setState({
+    ...this.state,
+    todoList: sorted,
+    sort: this.state.sort * -1
+  });
+};
+
+export const changeMode = function (mode) {
+  this.setState({...this.state, mode: mode});
+};
