@@ -4,3 +4,10 @@ export const STATUS = {
   ACTIVE: 0,
   COMPLETED: 1
 };
+
+export const MODE = {
+  ACTIVE: 0,
+  COMPLETED: 1,
+  ALL: 2
+};
+

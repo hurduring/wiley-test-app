@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoInput from '../../components/TodoInput';
+import Notes from '../../components/Notes';
 import {
   addNewNote,
   updateNewNote
@@ -24,6 +25,9 @@ class Home extends React.Component {
           title={this.state.newTodo}
           addNewNote={addNewNote.bind(this)}
           updateNewNote={updateNewNote.bind(this)}
+        />
+        <Notes
+
         />
       </div>
     );
