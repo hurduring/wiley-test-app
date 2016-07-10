@@ -1,0 +1,11 @@
+@import '../../styles/mixins.scss';
+
+.notes{
+  width: 100%;
+}
+
+@include tablet {
+  .notes {
+    width: auto;
+  }
+}
