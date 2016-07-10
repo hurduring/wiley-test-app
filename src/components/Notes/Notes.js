@@ -1,13 +1,22 @@
 import React, {PropTypes} from 'react';
 import Note from '../Note';
+import {
+  MODE
+} from '../../constants';
 import './styles.scss';
 
 const Notes = ({todoList, mode, ...handlers}) => {
 
   let list = todoList
     .filter((item) => {
-      //filter notes with unwanted statuses
-      return true;
+      switch (mode) {
+        case MODE.ACTIVE:
+          return item.status === MODE.ACTIVE;
+        case MODE.COMPLETED:
+          return item.status === MODE.COMPLETED;
+        default:
+          return true;
+      }
     })
     .map((item, key) => {
       return (
