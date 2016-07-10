@@ -14,6 +14,8 @@ const Notes = ({todoList, mode, ...handlers}) => {
         <Note
           key={key}
           title={item.title}
+          id={item.id}
+          status={item.status}
         />
       );
     });
