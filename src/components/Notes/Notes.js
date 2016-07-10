@@ -30,4 +30,12 @@ const Notes = ({todoList, mode, ...handlers}) => {
 
 };
 
+Notes.propTypes = {
+  updateNoteTitle: PropTypes.func,
+  updateNoteStatus: PropTypes.func,
+  deleteNote: PropTypes.func,
+  todoList: PropTypes.array,
+  mode: PropTypes.number
+};
+
 export default Notes;
