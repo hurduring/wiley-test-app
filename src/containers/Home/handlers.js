@@ -1,6 +1,7 @@
 import uuid from 'uuid';
 import {
-  ENTER_KEY
+  ENTER_KEY,
+  STATUS
 } from '../../constants';
 
 export const addNewNote = function (e) {
