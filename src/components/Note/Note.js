@@ -30,7 +30,7 @@ class Note extends React.Component {
 
   render() {
     return (
-      <div className="note">
+      <div className={classNames({note: true, "note_completed": this.props.status})}>
 
         <div className={classNames({hidden: this.state.editing, "note__complete-button checkbox-wrap": true})}>
           <input

@@ -7,6 +7,9 @@
   min-height: 4rem;
   outline: 2px solid black;
   margin: 1rem 0 1rem 0;
+  &_completed{
+    opacity: 0.5;
+  }
 
   &__complete-button {
     width: 100%;
