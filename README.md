@@ -1,1 +1,1 @@
-Wiley test app. Boilerplate based of React Slingshot. 
+Wiley test app. Boilerplate based on React Slingshot. 
